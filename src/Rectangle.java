@@ -18,6 +18,8 @@ public class Rectangle {
         y = 0;
     }
 
+    //geg
+
     public Rectangle() {
         x = 0;
         y = 0;
