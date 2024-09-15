@@ -1,8 +1,5 @@
 public class Rectangle {
-    private int x;
-    private int y;
-    private int width;
-    private int height;
+    private int x, y, width, height;
 
     public Rectangle(int x, int y, int width, int height) {
         this.x = x;
@@ -18,7 +15,6 @@ public class Rectangle {
         y = 0;
     }
 
-    //geg
 
     public Rectangle() {
         x = 0;
@@ -49,6 +45,15 @@ public class Rectangle {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    public static boolean checkCollision(Rectangle first, Rectangle second) {
+        boolean collision = first.x < second.x + second.width &&
+                first.x + first.width > second.x &&
+                first.y < second.y + second.height &&
+                first.y + first.height > second.y;
+        System.out.println(collision ? "The rectangles collide!" : "The rectangles do not collide!");
+        return collision;
     }
 
 }
